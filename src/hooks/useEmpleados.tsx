@@ -48,11 +48,10 @@ export const useUser = () => {
     });
   };
 
-  /*
   useEffect(() => {
     fetchUsers();
   });
-*/
+
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
