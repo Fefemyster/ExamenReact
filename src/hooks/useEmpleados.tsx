@@ -17,7 +17,7 @@ export const useUser = () => {
   });
 
   const API_URL =
-    "https://674c84c054e1fca9290cd05f.mockapi.io/api/examen/empleado ";
+    "https://674c84c054e1fca9290cd05f.mockapi.io/api/examen/empleado";
 
   const fetchUsers = async () => {
     setLoading(true);
@@ -50,7 +50,7 @@ export const useUser = () => {
 
   useEffect(() => {
     fetchUsers();
-  });
+  }, []);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
