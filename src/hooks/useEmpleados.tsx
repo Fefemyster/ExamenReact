@@ -52,8 +52,7 @@ export const useUser = () => {
   useEffect(() => {
     fetchUsers();
   });
-  */
-
+*/
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
@@ -79,7 +78,6 @@ export const useUser = () => {
       } else {
         await axios.post(API_URL, {
           ...formData,
-          role: "customer",
         });
         successAlert("Usuario creado correctamente.");
       }
