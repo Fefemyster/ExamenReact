@@ -5,13 +5,14 @@ import {
   type SetStateAction,
 } from "react";
 import type { FormData } from "../types/FormData";
+import type { Empleado } from "../types/User";
 
 export interface UserFormProps {
   formData: FormData;
   setFormData: Dispatch<SetStateAction<FormData>>;
   handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
-  userToEdit: any;
-  setUserToEdit: Dispatch<SetStateAction<any>>;
+  userToEdit: Empleado | null;
+  setUserToEdit: Dispatch<SetStateAction<Empleado | null>>;
   loading: boolean;
 }

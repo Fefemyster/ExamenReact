@@ -2,11 +2,11 @@ import { useState, useEffect, type ChangeEvent, type FormEvent } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import type { FormData } from "../types/FormData";
-import type { UserApi } from "../types/UserApi";
+import type { EmpleadoApi } from "../types/EmpleadoApi";
 
 export const useUser = () => {
-  const [users, setUsers] = useState<UserApi[]>([]);
-  const [userToEdit, setUserToEdit] = useState<UserApi | null>(null);
+  const [empleados, setEmpleados] = useState<EmpleadoApi[]>([]);
+  const [userToEdit, setUserToEdit] = useState<EmpleadoApi | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
   const [formData, setFormData] = useState<FormData>({
@@ -22,8 +22,8 @@ export const useUser = () => {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const response = await axios.get<UserApi[]>(API_URL);
-      setUsers(response.data);
+      const response = await axios.get<EmpleadoApi[]>(API_URL);
+      setEmpleados(response.data);
     } catch (err) {
       errorAlert(
         "No se pudo cargar los usuarios. Por favor, intente de nuevo más tarde."
@@ -48,9 +48,11 @@ export const useUser = () => {
     });
   };
 
+  /*
   useEffect(() => {
     fetchUsers();
   });
+  */
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -97,7 +99,7 @@ export const useUser = () => {
   };
 
   return {
-    users,
+    empleados,
     userToEdit,
     setUserToEdit,
     loading,

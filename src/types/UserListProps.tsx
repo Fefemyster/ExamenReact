@@ -1,7 +1,6 @@
-import type { User } from "./User";
+import type { Empleado } from "./User";
 
 export interface UserListProps {
-  users: User[];
-  handleEdit: (user: User) => void;
+  users: Empleado[];
   loading: boolean;
 }

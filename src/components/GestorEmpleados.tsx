@@ -1,11 +1,11 @@
 //import useUser from "../hooks/useUser";
 import UserForm from "./UserForm";
-import UserList from "./UserList";
-import useUser from "../hooks/useUser";
+import UserList from "./userList";
+import useUser from "../hooks/useEmpleados";
 
-const GestorUsuarios = () => {
+const GestorEmpleados = () => {
   const {
-    users,
+    empleados,
     userToEdit,
     setUserToEdit,
     loading,
@@ -17,7 +17,7 @@ const GestorUsuarios = () => {
   return (
     <div className="container mx-auto max-w-7xl">
       <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-10 tracking-tight">
-        Gestión de Usuarios
+        Gestión de Empleados
       </h1>
 
       <UserForm
@@ -30,9 +30,9 @@ const GestorUsuarios = () => {
         loading={loading}
       />
 
-      <UserList users={users} loading={loading} />
+      <UserList users={empleados} loading={loading} />
     </div>
   );
 };
 
-export default GestorUsuarios;
+export default GestorEmpleados;

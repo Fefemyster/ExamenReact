@@ -1,4 +1,4 @@
-export interface UserApi {
+export interface EmpleadoApi {
   nombre: string;
   dni: string;
   direccion: string;
