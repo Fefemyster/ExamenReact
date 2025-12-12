@@ -64,7 +64,7 @@ const UserForm = ({
   return (
     <div className="bg-white p-6 md:p-10 rounded-3xl shadow-2xl mb-12">
       <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
-        {userToEdit ? "Editar Usuario" : "Añadir Nuevo Usuario"}
+        {userToEdit ? "Editar Empleado" : "Añadir Nuevo Empleado"}
       </h2>
       <form onSubmit={handleFormSubmit} className="space-y-6">
         <div>
